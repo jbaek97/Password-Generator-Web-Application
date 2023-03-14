@@ -1,5 +1,6 @@
 # Password-Generator-Web-Application
-This project is a password generator that can take inputs on the characters used and the length of the password. 
+##Description
+For this project the goal was to make a password generator that would create a random password with a custom length and custom characters. The length and the characters would be chosen by the user. Their input would be collected by multiple prompts that would ask for the desired length of the password, a character amount between 7 to 129, and whether they'd like to use lowercase, uppercase, numeric, or special characters. Although this application may seem rather simple, on a larger scale password generators like this could become more advanced and tackle the ever-growing issue of cyber-security. While making this I learned about how a combination of for-loops and arrays can yield a lot of different functionalities. I also learned about how to apply events and event listeners. I also learned about the power of APIs and methods like prompts() and alerts().
 
 ## GitHub Pages Link:
 https://jbaek97.github.io/Password-Generator-Web-Application/
