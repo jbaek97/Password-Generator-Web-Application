@@ -22,7 +22,44 @@ function generatePassword() {
   if (JSON.parse(characters) < 8 || JSON.parse(characters) > 128) {
     alert("You have selected an invalid amount of characters. Please try again");
     return "Invalid input. Please try again."
-  } else if( 7 < JSON.parse(characters) < 129) {}
+  } else if( 7 < JSON.parse(characters) < 129) { 
+    //Prompts
+    var lowercase = prompt("Would you like the password to include lowercase values? (Press ok to include these values or press cancel to not include these values)", "");
+    console.log(lowercase);
+    var uppercase = prompt("Would you like the password to include uppercase values? (Press ok to include these values or press cancel to not include these values)", "");
+    var numeric = prompt("Would you like the password to include numeric values? (Press ok to include these values or press cancel to not include these values)", "");
+    var specialCharacters = prompt("Would you like the password to include special character values? (Press ok to include these values or press cancel to not include these values)", "");
+    //Characters Selected
+    var selectedCharacters = [];
+    //Adding the selected characters
+    //Lowercase
+    if (lowercase != null) {
+    selectedCharacters.push(...lowercaseArray);
+    };
+    //Uppercase
+    if (uppercase != null) {
+    selectedCharacters.push(...uppercaseArray);
+    };
+    //Numeric
+    if (numeric != null) {
+    selectedCharacters.push(...numericArray);
+    };
+    //Special Characters
+    if (specialCharacters != null) {
+    selectedCharacters.push(...specialCharactersArray);
+    };
+    //If no characters are selected, this message will pop-up
+    if (lowercase === null && uppercase === null && numeric === null && specialCharacters === null) {
+    alert("You have selected no characters so no password has been made.");
+    }
+    //Password Array
+    var passwordArray = [];
+    //For Loop
+    for (i=0; i < characters; i++){
+    passwordArray.push(selectedCharacters[Math.floor(Math.random()*selectedCharacters.length)])};
+    return passwordArray.join(""); }
+};
+
 
 
 // Get references to the #generate element
